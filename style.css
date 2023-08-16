@@ -1,0 +1,15 @@
+.mydivs{
+    border: 2px solid black;
+    width: 150px;
+    height: 100px;
+}
+#container{
+    display: flex;
+    /* border: 10px solid green; */
+    /* height: 100vh; */
+    flex-wrap: wrap;
+    align-items: center;
+}
+.mydivs:hover{
+    background-color: red;
+}
