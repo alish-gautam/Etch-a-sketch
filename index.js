@@ -1,16 +1,27 @@
 let container=document.getElementById("container")
-let divs
-for(let i=1;i<=16;i++){
-for (let j=1;j<=16;j++){
-     divs=document.createElement("div")
-    divs.textContent="Hey"
-    divs.classList.add("mydivs")
-    container.appendChild(divs)
+
+function cardCreate(rows,columns){
+
+    let containerwidth=container.offsetWidth
+    let cardwidth=(containerwidth/columns)
+    
+    for(let i=1;i<=rows;i++){
+
+        for(let j=1;j<=columns;j++){
+            let card=document.createElement("div")
+            card.classList.add("card")
+            container.appendChild(card)
+            card.style.width=cardwidth+"px"
+        }
+       
+    }
+
+    
 }
-}
-// document.addEventListener("onmouseover",()=>{
-//     divs.style.backgroundColor="red"
-// })
+let rows=10
+let columns=10
+cardCreate(rows,columns)
+
 
 
 
