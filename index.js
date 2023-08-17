@@ -1,26 +1,36 @@
 let container=document.getElementById("container")
 
-function cardCreate(rows,columns){
-
-    let containerwidth=container.offsetWidth
-    let cardwidth=(containerwidth/columns)
+function cardCreate(numbers){
     
-    for(let i=1;i<=rows;i++){
+    let containerwidth=container.offsetWidth
+    let cardwidth=(containerwidth/numbers)-2
+    
+    for(let i=1;i<=numbers;i++){
 
-        for(let j=1;j<=columns;j++){
+        for(let j=1;j<=numbers;j++){
             let card=document.createElement("div")
             card.classList.add("card")
             container.appendChild(card)
             card.style.width=cardwidth+"px"
+            card.style.height = cardwidth + "px";
+            card.addEventListener("mouseover",()=>{
+                card.style.backgroundColor="black"
+            })
         }
        
     }
 
     
 }
-let rows=10
-let columns=10
-cardCreate(rows,columns)
+function onButtonClick(){
+    let ask=Number(prompt("Enter the grid you want:"))
+    container.innerHTML=""
+    cardCreate(ask)
+}
+
+document.getElementById("button").addEventListener("click",onButtonClick)
+
+cardCreate(16)
 
 
 

@@ -1,13 +1,22 @@
 .card{
     border: 2px solid black;
     box-sizing: border-box;
-    height: 50px;
 }
 #container{
     display: flex;
     flex-wrap: wrap;
     width: 60%;
     margin: auto;
+   border: 2px solid red;
     margin-top: 5%;
     box-sizing: border-box;
+}
+.mybut{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+#button{
+    padding: 10px;
+    font-size: 20px;
 }
