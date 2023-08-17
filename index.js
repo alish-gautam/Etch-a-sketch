@@ -2,8 +2,8 @@ let container=document.getElementById("container")
 
 function cardCreate(numbers){
     
-    let containerwidth=container.offsetWidth
-    let cardwidth=(containerwidth/numbers)-2
+    let containerwidth=container.clientWidth
+    let cardwidth=(containerwidth/numbers)
     
     for(let i=1;i<=numbers;i++){
 
